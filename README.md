@@ -1,15 +1,20 @@
 # BitbucketSimpleGetter
 Simple getter for BitBucket API which allowes you to get most of the data from BitBucket API.
 
-**Usage**
+Api class has only one public method called *query* and as a param provide a repository which you want to access. 
+BitBucket API Browser - http://restbrowser.bitbucket.org/
+
+For example if you want to access to this resource: https://bitbucket.org/api/1.0/repositories/hipchat/chatty/branches/ use example below.
+
+**Usage example**
 ```php
 <?php
 use BitbucketSimpleGetter\Api as BitbucketApi;
 
 $config = [
     'bitbucketArea' => 'repositories',
-    'repoOwner' => 'REPOSITORY_OWNER',
-    'repoName' => 'REPOSITORY_NAME',
+    'repoOwner' => 'hipchat',
+    'repoName' => 'chatty',
     'username' => 'YOUR_USERNAME',
     'password' => 'YOUR_PASSWORD'
 ];

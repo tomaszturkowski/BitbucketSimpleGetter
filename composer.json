@@ -1,0 +1,21 @@
+{
+  "name": "tomaszturkowski/BitbucketSimpleGetter",
+  "description": "Simple getter for BitBucket API.",
+  "license": "MIT",
+  "homepage": "https://github.com/tomaszturkowski/BitbucketSimpleGetter",
+  "keywords": ["bitbucket", "api", "getter"],
+  "authors": [
+    {
+      "name": "Tomasz Turkowski",
+      "email": "tomasz.turkowski@gmail.com"
+    },
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "tomaszturkowski\\": "src/"
+    }
+  }
+}

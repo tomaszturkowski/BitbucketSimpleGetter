@@ -38,7 +38,7 @@ class Api
         $decodeJson = self::API_DECODE_JSON
     ) {
 
-        if (0 === count(array_diff($this->getConfigRequired(), array_keys($bitbucketConfig)))) {
+        if ($this->validateCofnig($bitbucketConfig)) {
             $this->setBitbucketArea($bitbucketConfig['bitbucketArea']);
             $this->setRepoOwner($bitbucketConfig['repoOwner']);
             $this->setRepoName($bitbucketConfig['repoName']);
@@ -231,6 +231,20 @@ class Api
     protected function getConfigRequired()
     {
         return $this->configRequired;
+    }
+
+    /**
+     * @param $bitbucketConfig
+     * @return bool
+     */
+    protected function validateConfig($bitbucketConfig)
+    {
+        if(0 === count(array_diff($this->getConfigRequired(), array_keys($bitbucketConfig))))
+        {
+            return true;
+        }
+
+        return false;
     }
 
 
